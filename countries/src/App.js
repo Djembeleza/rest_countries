@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import Navigation from './components/Navigation';
+import Country from './components/Country';
 
-function App() {
+const App = () => {
+  const [countries, setCountries] = useState([]);
+  /* const [query, setQuery] = useState('');*/
+
+  useEffect(() => {
+    getCountries();
+  });
+
+  const getCountries = async () => {
+    const resp = await fetch(`https://restcountries.eu/rest/v2/all`);
+    const data = await resp.json();
+    setCountries(data);
+  };
+
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='page-wrapper'>
+      <Navigation />
+      <div className='country-container'>
+        {countries.map((c) => (
+          <Country
+            title={c.name}
+            population={c.population}
+            region={c.region}
+            capital={c.capital}
+            flag={c.flag}
+          />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
