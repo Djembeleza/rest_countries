@@ -8,8 +8,17 @@
   display: flex;
   flex-direction: column;
   place-items: center;
-  background-color: rgba(217, 221, 223, 0.945);
+  background-color: rgba(156, 148, 148, 0.171);
 }
+
+button {
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  border: none;
+}
+
 
 .nav-container {
   display: flex;
@@ -17,30 +26,24 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  min-height: 12vh;
-  padding: 15px;
+  min-height: 10vh;
+  /* padding: 15px;
   padding-left: 40px;
-  padding-right: 30px;
+  padding-right: 30px; */
   background-color: white;
-  position: sticky;
 }
 
 
 .nav-text {
   font-weight: 620;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  padding-left: 5vw;
 }
 
 h3 {
   margin: 1.5em 0;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  width: 100vw;
-}
 
 .btn-container > button {
   border: none;
@@ -70,49 +73,9 @@ h3 {
   padding: 5px 0px 15px 10px;
 }
 
-
-
-.country-card > img {
+.country-card > a > img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-}
-
-
-.search-container {
-  width: 80vw;
-}
-
-.search-container > input {
-  margin-top: 22px;
-  width: 80vw;
-  border: none;
-  height: 50px;
-  border-radius: 2px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-
-.select-container {
-  margin-top: 30px;
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  
-}
-
-.select-container > label {
-  width: 40vw;
-  height: 30px;
-  border-radius: 2.5px;
-  background-color: white;
-  text-align: center;
-}
-
-.select-container > select {
-  height: 30px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  width: 40vw;
 }
 
 

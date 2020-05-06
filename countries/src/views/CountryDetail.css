@@ -1,0 +1,77 @@
+ul {
+    list-style-type: none;
+}
+
+.basic-info {
+    margin-bottom: 20px;
+}
+
+.country-borders {
+    margin-top: 20px;
+}
+
+.country-card {
+    background-color: white;
+}
+
+.detail-div {
+    margin-top: 2.5vh;
+}
+
+.other-info > li {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.text-div {
+    padding: 1.5rem;
+}
+
+.btn-back {
+    font-size: 1.1rem;
+    width: 30vw;
+    background-color: rgba(187, 178, 147, 0.486);
+}
+
+.btn-lang {
+    background-color: rgba(51, 25, 30, 0.651);
+}
+
+.btn-border {
+    margin: 0.7vh 0.3vw;
+}
+
+.btn-lang {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.btn-back:hover, .btn-border:hover {
+    cursor: pointer;
+    border: 2px dotted rgba(135, 223, 108, 0.658);
+    transition: border 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.btn-back:active, .btn-border:hover {
+    border: 3px solid rgba(135, 223, 108, 0.658);
+}
+
+.lang-list, .border-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.border-list {
+    justify-content: space-between;
+}
+
+.lang-list {
+    justify-content: space-evenly;
+}
+
+.lang-list > li {
+    margin-top: 1vh;
+}

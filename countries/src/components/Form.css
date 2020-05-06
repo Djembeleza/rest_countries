@@ -1,0 +1,45 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100vw;
+  }
+
+  
+.search-container {
+    width: 80vw;
+    height: 6vh;
+    margin-top: 3vh;
+    border-radius: 10px;
+  }
+  
+  .search-container > input {
+    width: 100%;
+    font-size: 0.89rem;
+    height: 100%;
+    padding-left: 3vw;
+    border-radius: 5px;
+    }
+  
+  .select-container {
+    margin-top: 30px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .select-container > label {
+    width: 40vw;
+    height: 30px;
+    border-radius: 2.5px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .select-container > select {
+    height: 30px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 40vw;
+  }

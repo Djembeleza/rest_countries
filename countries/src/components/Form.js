@@ -1,4 +1,5 @@
 import React from 'react';
+import './Form.css';
 
 const Form = ({ query, handleChange, handleSelected, selected, handleInput }) => {
     return (

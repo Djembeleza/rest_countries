@@ -11,7 +11,7 @@ const Home = () => {
 
     useEffect(() => {
         getCountries();
-    }, []);
+    }, [searchURL]);
 
     const handleChange = (e) => {
         setQuery(e.target.value);
@@ -32,6 +32,7 @@ const Home = () => {
 
     const handleSelected = (e) => {
         setSelected(e.target.value);
+        console.log(selected);
     }
 
     const getCountries = async () => {
