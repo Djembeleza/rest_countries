@@ -12,9 +12,9 @@ const Country = ({ title, population, region, capital, flag, id }) => {
       <div className='country-details'>
         <h3>{title}</h3>
         <ul>
-          <li>Population: {population.toLocaleString()}</li>
-          <li>Region: {region}</li>
-          <li>Capital: {capital}</li>
+          <li><b>Population:</b> {population.toLocaleString()}</li>
+          <li><b>Region:</b> {region}</li>
+          <li><b>Capital:</b> {capital}</li>
         </ul>
       </div>
     </div>

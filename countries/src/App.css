@@ -4,6 +4,10 @@
   padding: 0px;
 }
 
+b {
+  margin-right: 0.5vw;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: column;
@@ -41,7 +45,9 @@ button {
 }
 
 h3 {
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
+  font-weight: 800;
+  font-size: 2rem;
 }
 
 
@@ -91,4 +97,102 @@ h3 {
 
 .country-details > ul > li {
   margin-top: 10px;
+}
+
+/*Styling for the form starts here*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100vw;
+}
+
+
+.search-container {
+  width: 80vw;
+  height: 6vh;
+  margin-top: 3vh;
+  border-radius: 10px;
+}
+
+.search-container > input {
+  width: 100%;
+  font-size: 0.89rem;
+  height: 100%;
+  padding-left: 3vw;
+  border-radius: 5px;
+  }
+
+.select-container {
+  margin-top: 30px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.select-container > label {
+  width: 40vw;
+  height: 30px;
+  border-radius: 2.5px;
+  background-color: white;
+  text-align: center;
+}
+
+.select-container > select {
+  height: 30px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 40vw;
+}
+
+@media only screen and (min-width: 1200px) {
+ 
+  .nav-container {
+    min-height: 12vh;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 86vw;
+    margin-top: 3vh;
+  }
+  
+.search-container {
+  width: 36vw;
+}
+
+.select-container {
+  width: 18vw;
+}
+
+.select-container > select {
+  width: 16vw;
+}
+
+.select-container > label {
+  width: 16vw;
+}
+
+.btn-container {
+  margin-right: 10vw;
+}
+
+.nav-text {
+  margin-left: 2vw;
+}
+  .countries-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 86vw;
+  }
+
+  .country-card {
+    width: 18vw;
+  }
+
+  
 }
