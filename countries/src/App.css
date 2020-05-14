@@ -37,7 +37,9 @@ button {
   background-color: white;
 }
 
-
+.fa-moon {
+  margin-left: 1.2vw;
+}
 .nav-text {
   font-weight: 620;
   font-size: 1.1rem;
@@ -109,22 +111,26 @@ h3 {
 
 
 .search-container {
+  display: flex;
+  flex-direction: row;
   width: 80vw;
   height: 6vh;
   margin-top: 3vh;
   border-radius: 10px;
 }
-
+.fa-search {
+  height: 100%;
+  margin-right: 0.2vw;
+}
 .search-container > input {
   width: 100%;
   font-size: 0.89rem;
-  height: 100%;
-  padding-left: 3vw;
   border-radius: 5px;
+  height: 5vh;
   }
 
 .select-container {
-  margin-top: 30px;
+  margin-top: 3vh;
   width: 80vw;
   display: flex;
   flex-direction: column;
@@ -156,7 +162,6 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     width: 86vw;
-    margin-top: 3vh;
   }
   
 .search-container {

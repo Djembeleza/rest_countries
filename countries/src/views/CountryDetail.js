@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './CountryDetail.css';
+import { Loading } from '../components/Loading';
 
 const CountryDetail = ({ match }) => {
 
     const [item, setItem] = useState({});
     const [searchURL, setURL] = useState(`https://restcountries.eu/rest/v2/alpha/${match.params.id}`);
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         fetchItem();
@@ -19,6 +21,7 @@ const CountryDetail = ({ match }) => {
         const response = await fetch(searchURL);
         const data = await response.json();
         setItem(data);
+        setLoading(false);
     }
 
     return (
@@ -28,7 +31,8 @@ const CountryDetail = ({ match }) => {
                     <button className='btn-back'>Back</button>
                 </Link>
             </div>
-            <div className="country-detail">
+
+            {isLoading ? <Loading /> : <div className="country-detail">
                 <div className='country-img'>
                     <figure>
                         <img src={item.flag} alt={item.name} class='responsive-image' />
@@ -70,7 +74,8 @@ const CountryDetail = ({ match }) => {
                     </div>
                 </div>
 
-            </div>
+            </div>}
+
         </div >
     )
 }

@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import CountryList from '../components/CountryList';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Loading } from '../components/Loading';
+
+
 
 const Home = () => {
     const [countries, setCountries] = useState([]);
     const [query, setQuery] = useState('');
     const [selected, setSelected] = useState('');
     const [searchURL, setURL] = useState('https://restcountries.eu/rest/v2/all');
-
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         getCountries();
@@ -31,19 +35,19 @@ const Home = () => {
 
     const handleSelected = (e) => {
         setSelected(e.target.value);
-        console.log(selected);
     }
 
     const getCountries = async () => {
         const resp = await fetch(searchURL);
         const data = await resp.json();
         setCountries(data);
+        setLoading(false);
     };
     return (
         <div className="container">
             <div className="form-container">
                 <div className='search-container'>
-                    <input type='text' placeholder="Search for country..." value={query} onChange={handleChange} onKeyUp={handleInput} />
+                    <FontAwesomeIcon icon='search' /><input type='text' placeholder="Search for country..." value={query} onChange={handleChange} onKeyUp={handleInput} />
                 </div>
 
 
@@ -59,7 +63,8 @@ const Home = () => {
                     </select>
                 </div>
             </div>
-            <CountryList countries={countries} />
+
+            {isLoading ? <Loading /> : <CountryList countries={countries} />}
         </div>
     )
 }
