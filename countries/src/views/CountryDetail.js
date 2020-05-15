@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './CountryDetail.css';
 import { Loading } from '../components/Loading';
+import { ThemeContext } from '../context/ThemeContext';
+import { colors } from '../theme';
 
 const CountryDetail = ({ match }) => {
 
     const [item, setItem] = useState({});
     const [searchURL, setURL] = useState(`https://restcountries.eu/rest/v2/alpha/${match.params.id}`);
     const [isLoading, setLoading] = useState(true);
-
+    const [darkMode, setDarkMode] = useContext(ThemeContext);
+    
     useEffect(() => {
         fetchItem();
     }, [searchURL]);
@@ -25,7 +28,7 @@ const CountryDetail = ({ match }) => {
     }
 
     return (
-        <div className='detail-div'>
+        <div className='detail-div' style={darkMode ? { backgroundColor: colors.dark, color: colors.light } : { backgroundColor: colors.light, color: colors.dark }}>
             <div className='btn-div'>
                 <Link to='/'>
                     <button className='btn-back'>Back</button>

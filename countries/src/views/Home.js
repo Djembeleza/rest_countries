@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import CountryList from '../components/CountryList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Loading } from '../components/Loading';
+import { colors } from '../theme';
+import { ThemeContext } from '../context/ThemeContext';
 
 
 
@@ -11,6 +13,7 @@ const Home = () => {
     const [selected, setSelected] = useState('');
     const [searchURL, setURL] = useState('https://restcountries.eu/rest/v2/all');
     const [isLoading, setLoading] = useState(true);
+    const [darkMode, setDarkMode] = useContext(ThemeContext);
 
     useEffect(() => {
         getCountries();
@@ -44,7 +47,7 @@ const Home = () => {
         setLoading(false);
     };
     return (
-        <div className="container">
+        <div className="container" style={darkMode ? { backgroundColor: colors.dark, color: colors.light } : { backgroundColor: colors.light, color: colors.dark }}>
             <div className="form-container">
                 <div className='search-container'>
                     <FontAwesomeIcon icon='search' /><input type='text' placeholder="Search for country..." value={query} onChange={handleChange} onKeyUp={handleInput} />
@@ -52,7 +55,7 @@ const Home = () => {
 
 
                 <div className='select-container'>
-                    <label for='continents'>Filter by Region</label>
+                    <label for='continents' style={darkMode ? { backgroundColor: colors.dark, color: colors.light } : { backgroundColor: colors.light, color: colors.dark }}>Filter by Region</label>
                     <select multiple={false} onChange={handleSelected}
                         value={selected} id='continents' placeholder='Filter by Region'>
                         <option value="africa">Africa</option>

@@ -14,9 +14,6 @@ ul {
     background-color: white;
 }
 
-.detail-div {
-    margin-top: 2.5vh;
-}
 
 .other-info > li {
     display: flex;
@@ -81,16 +78,14 @@ ul {
 
 @media only screen and (min-width: 1200px) {
 
-.detail-div {
-        width: 80vw;
-    }
-
  .country-detail {
-     width: 80vw;
      display: flex;
      flex-direction: row;
     }
 
+    .detail-div {
+        width: 100vw;
+    }
 .info-container {
         display: flex;
         flex-direction: row;

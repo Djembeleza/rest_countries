@@ -8,12 +8,6 @@ b {
   margin-right: 0.5vw;
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  background-color: rgba(156, 148, 148, 0.171);
-}
 
 button {
   padding: 10px 20px;
@@ -37,7 +31,7 @@ button {
   background-color: white;
 }
 
-.fa-moon {
+.fa-moon, .fa-sun {
   margin-left: 1.2vw;
 }
 .nav-text {
@@ -55,14 +49,23 @@ h3 {
 
 .btn-container > button {
   border: none;
-  background-color: white;
+  background-color: #BC8F8F;
   font-size: 1rem;
+  border-radius: 10px;
+}
+
+.btn-container > button:hover {
+  
+  cursor: pointer;
+  border: 2px dotted rgba(135, 223, 108, 0.658);
+  transition: border 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .container {
   display: flex;
   flex-direction: column;
   place-items: center;
+  width: 100vw;
 }
 
 
@@ -126,7 +129,7 @@ h3 {
   width: 100%;
   font-size: 0.89rem;
   border-radius: 5px;
-  height: 5vh;
+  height: 8vh;
   }
 
 .select-container {
@@ -156,6 +159,8 @@ h3 {
  
   .nav-container {
     min-height: 12vh;
+    width: 100vw;
+    padding: 1.2rem;
   }
   .form-container {
     display: flex;
