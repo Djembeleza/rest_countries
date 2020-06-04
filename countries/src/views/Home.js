@@ -37,6 +37,7 @@ const Home = () => {
 
     const handleSelected = (e) => {
         setSelected(e.target.value);
+        console.log(selected);
     }
 
     const getCountries = async () => {
@@ -49,7 +50,7 @@ const Home = () => {
         <div className="container" style={darkMode ? { backgroundColor: colors.dark, color: colors.light } : { backgroundColor: colors.light, color: colors.dark }}>
             <div className="form-container">
                 <div className='search-container'>
-                    <FontAwesomeIcon icon='search' /><input type='text' placeholder="Search for country..." value={query} onChange={handleChange} onKeyUp={handleInput} />
+                    <FontAwesomeIcon icon='search' /><input type='text' placeholder="Search for country..." value={query} onChange={handleChange} onKeyUp={handleInput} name='searchInput' />
                 </div>
 
 
