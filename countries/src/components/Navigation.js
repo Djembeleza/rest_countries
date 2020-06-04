@@ -11,7 +11,7 @@ const Navigation = () => {
   }
   return (
     <div className='nav-container' style={darkMode ? { backgroundColor: colors.otherDark, color: colors.otherLight } : { backgroundColor: colors.otherLight, color: colors.otherDark }}>
-      <div className='nav-text'>Where in the world?</div>
+      <div className='nav-text'><FontAwesomeIcon icon='globe' />Where in the world?</div>
       <div className='btn-container'>
         <button onClick={handleClick}>Dark Mode{darkMode ? <FontAwesomeIcon icon='moon' /> : <FontAwesomeIcon icon='sun' />}</button>
       </div>

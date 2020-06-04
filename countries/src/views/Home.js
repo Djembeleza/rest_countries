@@ -21,8 +21,7 @@ const Home = () => {
 
     const handleChange = (e) => {
         setQuery(e.target.value);
-        console.log(query);
-        setURL(`https://restcountries.eu/rest/v2/name/${query}`);
+        setURL(`https://restcountries.eu/rest/v2/name/${e.target.value}`);
     }
 
     const handleInput = (e) => {

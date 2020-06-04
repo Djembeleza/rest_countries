@@ -14,12 +14,14 @@ ul {
     background-color: white;
 }
 
-
+.detail-div {
+    padding: 1.2rem;
+    
+}
 .other-info > li {
     display: flex;
     flex-direction: row;
 }
-
 
 .text-div {
     padding: 1.5rem;

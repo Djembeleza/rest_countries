@@ -6,10 +6,10 @@ import './App.css';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faSun, faMoon, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSun, faMoon, faSearch, faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { ThemeProvider } from './context/ThemeContext'
 
-library.add(fab, faSun, faMoon, faSearch)
+library.add(fab, faSun, faMoon, faSearch, faGlobe)
 
 const App = () => {
   return (
